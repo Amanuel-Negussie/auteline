@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="main.java.ScreenTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-08T02:50:32" hostname="LAPTOP-ITJF6BM2" time="0.005">
+  <properties/>
+  <testcase name="getDollarAmount()" classname="main.java.ScreenTest" time="0.004"/>
+  <testcase name="getMessage()" classname="main.java.ScreenTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

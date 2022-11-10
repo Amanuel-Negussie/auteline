@@ -1,12 +1,19 @@
 package main.java;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class AccountTest {
+    @BeforeEach
+    void setUp(){
+
+    }
 
     @Test
+    @DisplayName("This will pass criteria for validating Pin")
     public void testValidatePIN() {
         Account test = new Account(12345, 54321, 1000, 1200);
 

@@ -1,0 +1,63 @@
+plugins {
+    id 'java-library'
+    id 'eclipse' // optional (to generate Eclipse project files)
+    id 'idea' // optional (to generate IntelliJ IDEA project files)
+    id 'java'
+    id 'application'
+
+    id "org.sonarqube" version "3.4.0.2513"
+}
+sourceSets {
+    test {
+        java {
+            srcDirs = ['tests']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+version = '1.0.0-SNAPSHOT'
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    options.compilerArgs += '-parameters'
+}
+
+dependencies {
+    api(platform("org.junit:junit-bom:5.7.2"))
+    api("org.junit.jupiter:junit-jupiter-api") {
+        because 'building extensions in "main" using JUnit Jupiter API'
+    }
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine") {
+        because 'at least one engine is needed at test runtime'
+    }
+}
+
+test {
+    useJUnitPlatform()
+
+
+
+    testLogging{
+        events "passed", "skipped", "failed"
+    }
+}
+
+
+
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'main.java.ATMTest.Main'
+
+    }
+}
+
+//Define the main class for the application
+
+mainClassName = 'ATMTest.Main'
+

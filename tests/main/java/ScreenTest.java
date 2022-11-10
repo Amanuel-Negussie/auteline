@@ -1,12 +1,14 @@
 package main.java;
 
-import org.junit.Rule;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ScreenTest {
+    @BeforeEach
+    void setUp(){
 
+    }
     @Test
     public void getMessage() {
         Screen screen = new Screen();
