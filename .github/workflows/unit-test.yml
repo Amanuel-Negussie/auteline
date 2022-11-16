@@ -7,9 +7,7 @@
 
 name: Run Unit Tests with Gradle
 
-on:
-  pull_request:
-    branches: [ "develop", "joshvuksic-Testing-GitHubActions" ]
+on: [push]
 
 permissions:
   contents: read
