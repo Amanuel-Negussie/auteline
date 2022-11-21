@@ -5,7 +5,7 @@ package main.java;
  * simulator with basic features
  */
 
-// ATM.java
+// ATM.java 
 // Represents an automated teller machine
 
 public class ATM {
