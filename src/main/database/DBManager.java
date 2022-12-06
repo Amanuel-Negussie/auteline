@@ -23,7 +23,7 @@ public class DBManager {
       // start Embedded Derby engine
       Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
       // create a connection
-      dbConnection = DriverManager.getConnection("jdbc:derby:" + dbName + ";create=true");
+      dbConnection = DriverManager.getConnection("jdbc:mysql://159.89.117.198:3306", appAG5, Secret55!!");
     } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
       System.exit(1);
     } finally {
