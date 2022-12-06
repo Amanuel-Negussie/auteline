@@ -4,15 +4,26 @@ plugins {
     id 'idea' // optional (to generate IntelliJ IDEA project files)
     id 'java'
     id 'application'
-
     id "org.sonarqube" version "3.4.0.2513"
+    id 'jacoco'
 }
 sourceSets {
     test {
         java {
-            srcDirs = ['tests']
+            srcDirs = ['test']
         }
     }
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
+    dependsOn test
+}
+
+tasks.named('sonarqube').configure {
+    dependsOn jacocoTestReport
 }
 
 repositories {
@@ -39,9 +50,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-
-
-
     testLogging{
         events "passed", "skipped", "failed"
     }
@@ -57,7 +65,7 @@ jar{
     }
 }
 
+
 //Define the main class for the application
 
 mainClassName = 'ATMTest.Main'
-
