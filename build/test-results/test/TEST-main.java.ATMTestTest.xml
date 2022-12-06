@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="main.java.ATMTestTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-08T02:50:32" hostname="LAPTOP-ITJF6BM2" time="0.02">
+  <properties/>
+  <testcase name="testMain()" classname="main.java.ATMTestTest" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

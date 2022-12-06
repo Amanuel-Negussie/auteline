@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="main.java.AccountTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-11-08T02:50:32" hostname="LAPTOP-ITJF6BM2" time="0.012">
+  <properties/>
+  <testcase name="This will pass criteria for validating Pin" classname="main.java.AccountTest" time="0.005"/>
+  <testcase name="testGetAvailableBalance()" classname="main.java.AccountTest" time="0.001"/>
+  <testcase name="testDebit()" classname="main.java.AccountTest" time="0.0"/>
+  <testcase name="testGetAccountNumber()" classname="main.java.AccountTest" time="0.001"/>
+  <testcase name="testCredit()" classname="main.java.AccountTest" time="0.0"/>
+  <testcase name="testGetTotalBalance()" classname="main.java.AccountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
