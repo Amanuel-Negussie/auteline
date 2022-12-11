@@ -9,8 +9,11 @@ class BankDatabaseTest {
     void setUp(){
 
     }
-    @Test
-    public void testAuthenticateUser() {
+    
+    
+     @Test
+    public void DBConnect() {
+        
         DBManager secureDB;
         secureDB.connect();
         assertTrue(secureDB.getConnection() != NULL));
