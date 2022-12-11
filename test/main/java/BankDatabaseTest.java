@@ -15,13 +15,6 @@ class BankDatabaseTest {
         secureDB.connect();
         assertTrue(secureDB.getConnection() != NULL));
     }
-
-    @Test
-    public void DBConnect() {
-        BankDatabase bank = new BankDatabase();
-
-        assertTrue(bank.authenticateUser(12345, 54321));
-    }
     
     @Test
     public void testGetAvailableBalance() {
