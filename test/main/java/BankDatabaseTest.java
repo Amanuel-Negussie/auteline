@@ -11,11 +11,18 @@ class BankDatabaseTest {
     }
     @Test
     public void testAuthenticateUser() {
+        DBManager.connect();
+  
+        assertTrue(DBManager.getConnection() != NULL));
+    }
+
+    @Test
+    public void DBConnect() {
         BankDatabase bank = new BankDatabase();
 
         assertTrue(bank.authenticateUser(12345, 54321));
     }
-
+    
     @Test
     public void testGetAvailableBalance() {
         BankDatabase bank = new BankDatabase();
