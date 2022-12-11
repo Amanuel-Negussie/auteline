@@ -11,9 +11,9 @@ class BankDatabaseTest {
     }
     @Test
     public void testAuthenticateUser() {
-        DBManager.connect();
-  
-        assertTrue(DBManager.getConnection() != NULL));
+        DBManager secureDB;
+        secureDB.connect();
+        assertTrue(secureDB.getConnection() != NULL));
     }
 
     @Test
