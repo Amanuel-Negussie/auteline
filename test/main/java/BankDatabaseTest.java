@@ -10,13 +10,11 @@ class BankDatabaseTest {
 
     }
     
-    
-     @Test
-    public void DBConnect() {
-        
-        DBManager secureDB;
-        secureDB.connect();
-        assertTrue(secureDB.getConnection() != NULL));
+    @Test
+    public void testAuthenticateUser() {
+       BankDatabase bank = new BankDatabase();
+
+        assertTrue(bank.authenticateUser(12345, 54321)); 
     }
     
     @Test
