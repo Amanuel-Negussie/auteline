@@ -12,17 +12,9 @@ class BankDatabaseTest {
     
     @Test
     public void testAuthenticateUser() {
-        Account test = new Account(12345, 54321, 600, 800);
+        BankDatabase bank = new BankDatabase();
 
-        assertEquals(800, test.getTotalBalance(), 0);
-
-    }
-    
-    @Test
-    public void DBConnect() {
-        DBManager secureDB = new DBManager();;
-        secureDB.connect();
-        assertTrue(secureDB.getConnection() != null);
+        assertTrue(bank.authenticateUser(12345, 54321)); 
     }
     
     @Test
