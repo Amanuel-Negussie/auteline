@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBManager {
 
   private static Connection dbConnection = null;
-  private static final String dbName = "dbDemo";
+  private static final String dbName = "//159.89.117.198:3306";
 
   /**
    * This method starts embedded Derby engine and creates a connection. Consequent calls to this
@@ -23,7 +23,7 @@ public class DBManager {
       // start Embedded Derby engine
       Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
       // create a connection
-      dbConnection = DriverManager.getConnection("jdbc:mysql://159.89.117.198:3306", appAG5, Secret55!!");
+      dbConnection = DriverManager.getConnection("jdbc:derby:" + dbName);
     } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
       System.exit(1);
     } finally {
