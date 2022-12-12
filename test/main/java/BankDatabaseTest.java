@@ -18,6 +18,13 @@ class BankDatabaseTest {
     }
     
     @Test
+    public void DBConnect() {
+        DBManager secureDB = new DBManager();;
+        secureDB.connect();
+        assertTrue(secureDB.getConnection() != NULL));
+    }
+    
+    @Test
     public void testGetAvailableBalance() {
         BankDatabase bank = new BankDatabase();
 
