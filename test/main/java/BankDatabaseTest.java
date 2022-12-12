@@ -12,9 +12,10 @@ class BankDatabaseTest {
     
     @Test
     public void testAuthenticateUser() {
-       BankDatabase bank = new BankDatabase();
+        Account test = new Account(12345, 54321, 600, 800);
 
-        assertTrue(bank.authenticateUser(12345, 54321)); 
+        assertEquals(800, test.getTotalBalance(), 0);
+
     }
     
     @Test
